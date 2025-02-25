@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a60e0a-5c0c-4473-89a6-312d506a2a63" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/firstYear.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/pages/secondYear.tsx" afterDir="false" />
+    <list default="true" id="64a60e0a-5c0c-4473-89a6-312d506a2a63" name="Changes" comment="style: import company logo">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/app-logo-icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/app-logo-icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/app-logo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/app-logo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/app-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/welcome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/pail/67bd8198d762c.pail" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/pail/67bd825eb24c1.pail" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,6 +189,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/colin/Documents/WEB/Test/NoteProApp/public/logo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -205,6 +200,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/logo" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="PestRunConfigurationType">
       <option name="pestRunnerSettings">
@@ -233,8 +233,41 @@
       <option name="presentableId" value="Default" />
       <updated>1740472896140</updated>
       <workItem from="1740472897230" duration="3398000" />
-      <workItem from="1740477508805" duration="949000" />
+      <workItem from="1740477508805" duration="1682000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: create pages and add the routes">
+      <option name="closed" value="true" />
+      <created>1740478600729</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740478600729</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: other">
+      <option name="closed" value="true" />
+      <created>1740478623690</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740478623690</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: fixing problems">
+      <option name="closed" value="true" />
+      <created>1740478649158</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740478649158</updated>
+    </task>
+    <task id="LOCAL-00004" summary="style: import company logo">
+      <option name="closed" value="true" />
+      <created>1740479174504</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740479174504</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,5 +277,12 @@
         <option value="$PROJECT_DIR$/vendor/tightenco/ziggy" />
       </list>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: create pages and add the routes" />
+    <MESSAGE value="feat: other" />
+    <MESSAGE value="feat: fixing problems" />
+    <MESSAGE value="style: import company logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="style: import company logo" />
   </component>
 </project>
