@@ -1,7 +1,9 @@
+import { PencilIcon } from 'lucide-react';
+
 interface GradesTablesProps {
     moduleName: string,
     pdfUrl: string,
-    grades: number
+    grades: string
 }
 
 export default function GradesTables({moduleName, pdfUrl, grades } : GradesTablesProps) {
