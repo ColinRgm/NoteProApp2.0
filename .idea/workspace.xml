@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a60e0a-5c0c-4473-89a6-312d506a2a63" name="Changes" comment="style: import company logo">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="64a60e0a-5c0c-4473-89a6-312d506a2a63" name="Changes" comment="fix: general editing">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/grade-table.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/fourthYear.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/pages/thirdYear.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/app-sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/app-sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/welcome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/welcome.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ui/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ui/sidebar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/firstYear.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/firstYear.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/secondYear.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/secondYear.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +238,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740472896140</updated>
       <workItem from="1740472897230" duration="3398000" />
-      <workItem from="1740477508805" duration="1682000" />
+      <workItem from="1740477508805" duration="5635000" />
     </task>
     <task id="LOCAL-00001" summary="feat: create pages and add the routes">
       <option name="closed" value="true" />
@@ -267,7 +272,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740479174504</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: edit git ignore">
+      <option name="closed" value="true" />
+      <created>1740479205763</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740479205763</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: general editing">
+      <option name="closed" value="true" />
+      <created>1740479230549</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740479230549</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +304,8 @@
     <MESSAGE value="feat: other" />
     <MESSAGE value="feat: fixing problems" />
     <MESSAGE value="style: import company logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="style: import company logo" />
+    <MESSAGE value="fix: edit git ignore" />
+    <MESSAGE value="fix: general editing" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: general editing" />
   </component>
 </project>
