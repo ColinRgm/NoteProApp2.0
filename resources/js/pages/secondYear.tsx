@@ -20,7 +20,7 @@ export default function SecondYear() {
             <div className="flex flex-1 flex-col items-center justify-center gap-10 rounded-xl p-4">
                 <Card className="w-[70%] p-5">
                     <CardTitle>2ème année</CardTitle>
-                    <CardContent className="mt-6">
+                    <CardContent>
                         <GradesTables moduleName="Module 12" pdfUrl="test12.pdf" grades={4} />
                     </CardContent>
                 </Card>
