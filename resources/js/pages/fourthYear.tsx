@@ -7,19 +7,19 @@ import GradesTables from '@/components/grade-table';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
-        title: '1ère année',
-        href: '/firstYear',
+        title: '4ème année',
+        href: '/fourthYear',
     },
 ];
 
-export default function FirstYear() {
+export default function FourhtYear() {
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="1ère année" />
 
             <div className="flex flex-1 flex-col items-center justify-center gap-10 rounded-xl p-4">
                 <Card className="w-[70%] p-5">
-                    <CardTitle>1ère année</CardTitle>
+                    <CardTitle>4ème année</CardTitle>
                     <CardContent className="mt-6">
                         <GradesTables
                             moduleName="Module 12"
