@@ -3,7 +3,7 @@ import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { HouseIcon, Tally1Icon, Tally2Icon } from 'lucide-react';
+import { HouseIcon, Tally1Icon, Tally2Icon, Tally3Icon, Tally4Icon } from 'lucide-react';
 import AppLogo from './app-logo';
 
 const mainNavItems: NavItem[] = [
@@ -21,6 +21,16 @@ const mainNavItems: NavItem[] = [
         title: '2ème année',
         url: '/secondYear',
         icon: Tally2Icon
+    },
+    {
+        title: '3ème année',
+        url: '/thirdYear',
+        icon: Tally3Icon
+    },
+    {
+        title: '4ème année',
+        url: '/fourthYear',
+        icon: Tally4Icon
     }
 ];
 

@@ -19,6 +19,14 @@ Route::middleware(['auth'])->group(function () {
     Route::get('secondYear', function () {
         return Inertia::render('secondYear');
     })->name('secondYear');
+
+    Route::get('thirdYear', function () {
+        return Inertia::render('thirdYear');
+    })->name('thirdYear');
+
+    Route::get('fourthYear', function () {
+        return Inertia::render('fourthYear');
+    })->name('fourthYear');
 });
 
 require __DIR__.'/settings.php';
