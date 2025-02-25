@@ -19,7 +19,7 @@ export default function FirstYear() {
 
             <div className="flex flex-1 flex-col items-center justify-center gap-10 rounded-xl p-4">
                 <Card className="w-[70%] p-5">
-                    <CardTitle>1ère année</CardTitle>
+                    <CardTitle size="xxl" margin="big">1ère année</CardTitle>
                     <CardContent>
                         <GradesTables
                             moduleName="Module 12"

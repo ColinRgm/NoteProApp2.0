@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a60e0a-5c0c-4473-89a6-312d506a2a63" name="Changes" comment="feat: add the new pages to the route">
+    <list default="true" id="64a60e0a-5c0c-4473-89a6-312d506a2a63" name="Changes" comment="fix: edit gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.sqlite" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/ui/card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ui/card.tsx" afterDir="false" />
@@ -240,7 +240,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740472896140</updated>
       <workItem from="1740472897230" duration="3398000" />
-      <workItem from="1740477508805" duration="6834000" />
+      <workItem from="1740477508805" duration="8489000" />
     </task>
     <task id="LOCAL-00001" summary="feat: create pages and add the routes">
       <option name="closed" value="true" />
@@ -322,7 +322,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740486275293</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="style: edit the style for the cards">
+      <option name="closed" value="true" />
+      <created>1740487349720</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740487349720</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix: edit gitignore">
+      <option name="closed" value="true" />
+      <created>1740487386074</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1740487386074</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,6 +360,8 @@
     <MESSAGE value="feat: create page for third and fourth, add the grade component" />
     <MESSAGE value="feat:" />
     <MESSAGE value="feat: add the new pages to the route" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: add the new pages to the route" />
+    <MESSAGE value="style: edit the style for the cards" />
+    <MESSAGE value="fix: edit gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: edit gitignore" />
   </component>
 </project>
