@@ -18,6 +18,6 @@
     "Pest\\Plugins\\Version",
     "Pest\\Plugins\\Parallel",
     "Pest\\Arch\\Plugin",
-    "Pest\\Laravel\\Plugin",
-    "Pest\\Drift\\Plugin"
+    "Pest\\Drift\\Plugin",
+    "Pest\\Laravel\\Plugin"
 ]

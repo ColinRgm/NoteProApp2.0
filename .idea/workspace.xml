@@ -4,13 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64a60e0a-5c0c-4473-89a6-312d506a2a63" name="Changes" comment="fix: finish the style for the cards">
+    <list default="true" id="64a60e0a-5c0c-4473-89a6-312d506a2a63" name="Changes" comment="fix: bug about the company logo">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f0987643-db2a-4fc1-b19f-89426f18a2c2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f0987643-db2a-4fc1-b19f-89426f18a2c2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/database.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/database/database.sqlite" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/user-menu-content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/user-menu-content.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/settings/appearance.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/settings/appearance.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/settings/password.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/settings/password.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/settings/profile.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/settings/profile.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/@headlessui_react.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/@headlessui_react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/@inertiajs_react.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/@inertiajs_react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/@inertiajs_react.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/@inertiajs_react.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/@radix-ui_react-dropdown-menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/@radix-ui_react-tooltip.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/@radix-ui_react-tooltip.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-2KBDGVMZ.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/chunk-2KBDGVMZ.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/pest-plugins.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/pest-plugins.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +190,12 @@
       <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
     </include_path>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -184,27 +205,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/colin/Documents/WEB/Test/NoteProApp/public/logo",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/home/colin/Documents/WEB/Test/NoteProApp/node_modules/prettier",
-    "ts.external.directory.path": "/home/colin/Documents/WEB/Test/NoteProApp/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/colin/Documents/WEB/Test/NoteProApp/public/logo&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/colin/Documents/WEB/Test/NoteProApp/node_modules/prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/colin/Documents/WEB/Test/NoteProApp/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/logo" />
@@ -238,7 +259,8 @@
       <option name="presentableId" value="Default" />
       <updated>1740472896140</updated>
       <workItem from="1740472897230" duration="3398000" />
-      <workItem from="1740477508805" duration="9241000" />
+      <workItem from="1740477508805" duration="17090000" />
+      <workItem from="1740497816704" duration="6344000" />
     </task>
     <task id="LOCAL-00001" summary="feat: create pages and add the routes">
       <option name="closed" value="true" />
@@ -344,7 +366,63 @@
       <option name="project" value="LOCAL" />
       <updated>1740489019827</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fix: translation">
+      <option name="closed" value="true" />
+      <created>1740489818815</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1740489818815</updated>
+    </task>
+    <task id="LOCAL-00015" summary="style: add the company logo in the sidebar">
+      <option name="closed" value="true" />
+      <created>1740497392559</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1740497392559</updated>
+    </task>
+    <task id="LOCAL-00016" summary="style: general style">
+      <option name="closed" value="true" />
+      <created>1740497454523</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1740497454523</updated>
+    </task>
+    <task id="LOCAL-00017" summary="style: general style">
+      <option name="closed" value="true" />
+      <created>1740497470091</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1740497470091</updated>
+    </task>
+    <task id="LOCAL-00018" summary="fix: delete the apparence setting">
+      <option name="closed" value="true" />
+      <created>1740497490521</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1740497490521</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix: delete the apparence setting">
+      <option name="closed" value="true" />
+      <created>1740497498504</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1740497498504</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fix: bug about the company logo">
+      <option name="closed" value="true" />
+      <created>1740497636913</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1740497636913</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,6 +447,11 @@
     <MESSAGE value="style: edit the style for the cards" />
     <MESSAGE value="fix: edit gitignore" />
     <MESSAGE value="fix: finish the style for the cards" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: finish the style for the cards" />
+    <MESSAGE value="fix: translation" />
+    <MESSAGE value="style: add the company logo in the sidebar" />
+    <MESSAGE value="style: general style" />
+    <MESSAGE value="fix: delete the apparence setting" />
+    <MESSAGE value="fix: bug about the company logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: bug about the company logo" />
   </component>
 </project>
