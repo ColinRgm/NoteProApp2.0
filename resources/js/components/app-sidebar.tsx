@@ -3,8 +3,10 @@ import { NavUser } from '@/components/nav-user';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from '@/components/ui/sidebar';
 import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
-import { HouseIcon, Tally1Icon, Tally2Icon, Tally3Icon, Tally4Icon } from 'lucide-react';
+import { HouseIcon } from 'lucide-react';
 import AppLogo from './app-logo';
+import { PiNumberSquareOneBold, PiNumberSquareTwoBold, PiNumberSquareThreeBold, PiNumberSquareFourBold } from "react-icons/pi";
+
 
 const mainNavItems: NavItem[] = [
     {
@@ -15,22 +17,22 @@ const mainNavItems: NavItem[] = [
     {
         title: '1ère année',
         url: '/firstYear',
-        icon: Tally1Icon
+        icon: PiNumberSquareOneBold
     },
     {
         title: '2ème année',
         url: '/secondYear',
-        icon: Tally2Icon
+        icon: PiNumberSquareTwoBold
     },
     {
         title: '3ème année',
         url: '/thirdYear',
-        icon: Tally3Icon
+        icon: PiNumberSquareThreeBold
     },
     {
         title: '4ème année',
         url: '/fourthYear',
-        icon: Tally4Icon
+        icon: PiNumberSquareFourBold
     }
 ];
 

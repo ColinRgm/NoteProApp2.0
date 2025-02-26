@@ -1,5 +1,4 @@
-import { LucideIcon } from 'lucide-react';
-
+import { IconBaseProps } from 'react-icons';
 export interface Auth {
     user: User;
 }
@@ -17,7 +16,7 @@ export interface NavGroup {
 export interface NavItem {
     title: string;
     url: string;
-    icon?: LucideIcon | null;
+    icon?: React.ComponentType<IconBaseProps> | null;
     isActive?: boolean;
 }
 
