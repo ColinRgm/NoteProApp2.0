@@ -29,7 +29,9 @@ export default function Dashboard() {
                     </Card>
 
                     <Card className="p-5">
-                        <CardTitle size="lg" margin="small">Informatique</CardTitle>
+                        <CardTitle size="lg" margin="small">
+                            Informatique
+                        </CardTitle>
                         <CardContent className="text-4xl">5</CardContent>
                     </Card>
 
@@ -40,11 +42,19 @@ export default function Dashboard() {
                 </div>
 
                 <Card className="w-[70%] p-5">
-                    <CardTitle size="xxl" margin="big">5 dernière notes</CardTitle>
+                    <CardTitle size="xxl" margin="big">
+                        5 dernière notes
+                    </CardTitle>
                     <CardContent>
-                        <GradesTables moduleName="1" pdfUrl="2" grades={3} />
+                        <GradesTables moduleName="1" pdfUrl="2" grades="3" />
                     </CardContent>
                 </Card>
+
+                <div>
+                    <button>
+                        <a href="addGrade.tsx"></a>
+                    </button>
+                </div>
             </div>
         </AppLayout>
     );

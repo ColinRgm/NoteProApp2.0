@@ -27,6 +27,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('fourthYear', function () {
         return Inertia::render('fourthYear');
     })->name('fourthYear');
+
+    Route::get('addGrade', function () {
+        return Inertia::render('addGrade');
+    })->name('addGrade');
 });
 
 require __DIR__.'/settings.php';
