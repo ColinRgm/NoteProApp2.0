@@ -29,6 +29,7 @@ export default function AddGrade() {
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
+                                    {/* Récupérer les modules depuis la DB */}
                                     <SelectLabel>Module</SelectLabel>
                                     <SelectItem value="241">Module 241</SelectItem>
 
@@ -48,6 +49,7 @@ export default function AddGrade() {
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
+                                    {/* Récupérer les semestres depuis la DB */}
                                     <SelectLabel>1ère année</SelectLabel>
                                     <SelectItem value="semestre_1">Semestre 1</SelectItem>
                                     <SelectItem value="semestre_2">Semestre 2</SelectItem>
@@ -90,6 +92,8 @@ export default function AddGrade() {
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
+
+                        <button className="bg-[#141e66] text-white rounded-lg p-2 w-xl mt-[50px]">Ajouter</button>
                     </CardContent>
                 </Card>
             </div>
