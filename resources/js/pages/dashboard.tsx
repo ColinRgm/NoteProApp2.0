@@ -1,8 +1,9 @@
+import GradesTables from '@/components/grade-table';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import AppLayout from '@/layouts/app-layout';
 import { type BreadcrumbItem } from '@/types';
-import { Head } from '@inertiajs/react';
-import GradesTables from '@/components/grade-table';
+import { Head, Link } from '@inertiajs/react';
+import { IoAddCircleOutline } from 'react-icons/io5';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -52,7 +53,9 @@ export default function Dashboard() {
 
                 <div>
                     <button>
-                        <a href="addGrade.tsx"></a>
+                        <Link href="/addGrade" prefetch>
+                            <IoAddCircleOutline className="hover:[h-20 w-20] h-10 w-10" />
+                        </Link>
                     </button>
                 </div>
             </div>
