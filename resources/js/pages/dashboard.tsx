@@ -1,5 +1,5 @@
-import GradesTables from '@/components/grade-table';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import Tables from '@/components/ui/table';
 import AppLayout from '@/layouts/app-layout';
 import { type BreadcrumbItem } from '@/types';
 import { Head, Link } from '@inertiajs/react';
@@ -47,7 +47,14 @@ export default function Dashboard() {
                         5 dernière notes
                     </CardTitle>
                     <CardContent>
-                        <GradesTables moduleName="1" pdfUrl="2" grades="3" />
+                        <Tables
+                            col_one_title="Branche / modules"
+                            col_two_title="PDF"
+                            col_three_title="Note"
+                            col_one_content="Module 231"
+                            col_two_content="test.pdf"
+                            col_three_content="5"
+                        />
                     </CardContent>
                 </Card>
 

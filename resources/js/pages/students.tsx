@@ -2,8 +2,9 @@ import { type BreadcrumbItem } from '@/types';
 
 import { Head } from '@inertiajs/react';
 
-import AppLayout from '@/layouts/app-layout';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
+import Tables from '@/components/ui/table';
+import AppLayout from '@/layouts/app-layout';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -13,21 +14,27 @@ const breadcrumbs: BreadcrumbItem[] = [
 ];
 
 export default function Students() {
-
-
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Dashboard" />
 
             <div className="flex flex-1 flex-col items-center justify-center gap-20 rounded-xl p-4">
-                <div className="grid w-[70%] auto-rows-min gap-20 md:grid-cols-4">
-                    <Card>
-                        <CardTitle>
-
+                <div className="grid w-[70%] auto-rows-min">
+                    <Card className="p-5">
+                        <CardTitle size="xxl" margin="big">
+                            Liste des apprentis
                         </CardTitle>
 
                         <CardContent>
+                            <Tables
+                                col_one_title="Prénom"
+                                col_two_title="Nom"
+                                col_three_title="Année"
 
+                                col_one_content="Jean"
+                                col_two_content="Dupont"
+                                col_three_content="2021"
+                            />
                         </CardContent>
                     </Card>
                 </div>

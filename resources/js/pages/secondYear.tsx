@@ -3,7 +3,8 @@ import AppLayout from '@/layouts/app-layout';
 import { type BreadcrumbItem } from '@/types';
 import { Head } from '@inertiajs/react';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
-import GradesTables from '@/components/grade-table';
+import GradesTables from '@/components/ui/table';
+import Tables from '@/components/ui/table';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -21,7 +22,14 @@ export default function SecondYear() {
                 <Card className="w-[70%] p-5">
                     <CardTitle size="xxl" margin="big">2ème année</CardTitle>
                     <CardContent>
-                        <GradesTables moduleName="Module 12" pdfUrl="test12.pdf" grades={4} />
+                       <Tables
+                            col_one_title="Branche / modules"
+                            col_two_title="PDF"
+                            col_three_title="Note"
+                            col_one_content="Module 231"
+                            col_two_content="test.pdf"
+                            col_three_content="5"
+                        />
                     </CardContent>
                 </Card>
             </div>
