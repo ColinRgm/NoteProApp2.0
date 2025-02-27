@@ -41,7 +41,13 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
 
             <SettingsLayout>
                 <div className="space-y-6">
-                    <HeadingSmall title="Information du profil" description="Modifier votre nom et vote adresse mail" />
+                    <HeadingSmall title="Information du profil" />
+
+                    <div className="flex gap-4">
+                        <p className="text-sm font-medium">Rôle</p>
+                        <p className={"text-sm font-medium"}>Apprenti</p>
+
+                    </div>
 
                     <form onSubmit={submit} className="space-y-6">
                         <div className="grid gap-2">
