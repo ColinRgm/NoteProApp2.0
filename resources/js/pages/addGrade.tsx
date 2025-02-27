@@ -36,6 +36,9 @@ export default function AddGrade() {
                                     <SelectLabel>CIE</SelectLabel>
                                     <SelectItem value="213">CIE 213</SelectItem>
 
+                                    <SelectLabel>ECG</SelectLabel>
+                                    <SelectItem value="213">ECG</SelectItem>
+
                                     <SelectLabel>Math / Anglais</SelectLabel>
                                     <SelectItem value="math">Math</SelectItem>
                                     <SelectItem value="anglais">Anglais</SelectItem>
