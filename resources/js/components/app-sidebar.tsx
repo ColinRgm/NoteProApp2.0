@@ -33,6 +33,11 @@ const mainNavItems: NavItem[] = [
         title: '4ème année',
         url: '/fourthYear',
         icon: PiNumberSquareFourBold
+    },
+    {
+        title: 'Apprentis',
+        url: '/students',
+        icon: PiNumberSquareFourBold
     }
 ];
 

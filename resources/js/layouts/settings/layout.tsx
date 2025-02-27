@@ -15,11 +15,6 @@ const sidebarNavItems: NavItem[] = [
         title: 'Mot de passe',
         url: '/settings/password',
         icon: null,
-    },
-    {
-        title: 'Apprentis',
-        url: '/settings/students',
-        icon: null,
     }
 ];
 

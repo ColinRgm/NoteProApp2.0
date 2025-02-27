@@ -31,6 +31,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('addGrade', function () {
         return Inertia::render('addGrade');
     })->name('addGrade');
+
+    Route::get('students', function () {
+        return Inertia::render('students');
+    })->name('students');
+
 });
 
 require __DIR__.'/settings.php';
