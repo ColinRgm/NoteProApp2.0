@@ -5,7 +5,8 @@ import { type NavItem } from '@/types';
 import { Link } from '@inertiajs/react';
 import { HouseIcon } from 'lucide-react';
 import AppLogo from './app-logo';
-import { PiNumberSquareOneBold, PiNumberSquareTwoBold, PiNumberSquareThreeBold, PiNumberSquareFourBold } from "react-icons/pi";
+import { PiNumberSquareOneBold, PiNumberSquareTwoBold, PiNumberSquareThreeBold, PiNumberSquareFourBold, PiUsersThree} from "react-icons/pi";
+import { NavFooter } from '@/components/nav-footer';
 
 
 const mainNavItems: NavItem[] = [
@@ -34,12 +35,16 @@ const mainNavItems: NavItem[] = [
         url: '/fourthYear',
         icon: PiNumberSquareFourBold
     },
-    {
+
+];
+
+const footerNavItems: NavItem[] = [
+        {
         title: 'Apprentis',
         url: '/students',
-        icon: PiNumberSquareFourBold
+        icon: PiUsersThree
     }
-];
+]
 
 export function AppSidebar() {
     return (
@@ -61,6 +66,7 @@ export function AppSidebar() {
             </SidebarContent>
 
             <SidebarFooter className="bg-[#141e66] text-white">
+                <NavFooter items={footerNavItems} />
                 <NavUser />
             </SidebarFooter>
         </Sidebar>
