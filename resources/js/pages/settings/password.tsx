@@ -54,7 +54,7 @@ export default function Password() {
 
             <SettingsLayout>
                 <div className="space-y-6">
-                    <HeadingSmall title="Modifier le mot de passe" description="Veuillez utiliser un mot de passe robuste" />
+                    <HeadingSmall title="Modifier le mot de passe" />
 
                     <form onSubmit={updatePassword} className="space-y-6">
                         <div className="grid gap-2">
