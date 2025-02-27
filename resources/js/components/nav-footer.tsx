@@ -19,7 +19,7 @@ export function NavFooter({
                                 asChild
                                 className="text-white hover:text-neutral-800 dark:text-neutral-300 dark:hover:text-neutral-100 py-7"
                             >
-                                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                                <a href={item.url} rel="noopener noreferrer">
                                     {item.icon && <Icon iconNode={item.icon} className="h-5 w-5" />}
                                     <span>{item.title}</span>
                                 </a>
