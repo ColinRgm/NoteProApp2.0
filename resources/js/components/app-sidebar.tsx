@@ -38,6 +38,12 @@ const mainNavItems: NavItem[] = [
 
 ];
 
+
+/*
+ *
+ * Only accessible when log with formator / coach roles
+ *
+ */
 const footerNavItems: NavItem[] = [
         {
         title: 'Apprentis',
