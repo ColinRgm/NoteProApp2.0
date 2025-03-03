@@ -1,10 +1,11 @@
 import { type BreadcrumbItem } from '@/types';
 
-import { Head } from '@inertiajs/react';
+import { Head, Link } from '@inertiajs/react';
 
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import Tables from '@/components/ui/table';
 import AppLayout from '@/layouts/app-layout';
+import { IoAddCircleOutline } from 'react-icons/io5';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -37,6 +38,13 @@ export default function Students() {
                             />
                         </CardContent>
                     </Card>
+                </div>
+                <div>
+                    <button>
+                        <Link href="/addStudent" prefetch>
+                            <IoAddCircleOutline className="hover:[h-20 w-20] h-10 w-10" />
+                        </Link>
+                    </button>
                 </div>
             </div>
         </AppLayout>
