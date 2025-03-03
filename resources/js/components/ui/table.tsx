@@ -1,5 +1,3 @@
-import { PencilIcon } from 'lucide-react';
-
 interface TablesProps {
 
     col_one_title: string,

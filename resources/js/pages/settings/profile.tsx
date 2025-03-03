@@ -24,7 +24,7 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
         last_name: auth.user.last_name,
-        name: auth.user.first_name,
+        first_name: auth.user.first_name,
         email: auth.user.email,
     });
 
@@ -74,7 +74,7 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
                                 id="first_name"
                                 className="mt-1 block w-full"
                                 value={data.first_name}
-                                onChange={(e) => setData('name', e.target.value)}
+                                onChange={(e) => setData('first_name', e.target.value)}
                                 required
                                 autoComplete="first_name"
                                 placeholder="Prénom"
