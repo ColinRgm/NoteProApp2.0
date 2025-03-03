@@ -4,15 +4,8 @@ import type { BreadcrumbItem } from '@/types';
 import { Head } from '@inertiajs/react';
 
 import { Input } from '@/components/ui/input';
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectLabel,
-    SelectTrigger,
-    SelectValue
-} from '@/components/ui/select';
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Button } from '@/components/ui/button';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -49,26 +42,25 @@ export default function AddStudent() {
 
                         <div className="flex flex-row items-center justify-center gap-5">
                             <label htmlFor="coach">Coach:</label>
-                        <Select>
-                            <SelectTrigger className="w-[400px]">
-                                <SelectValue placeholder="Coach" />
-                            </SelectTrigger>
-                            <SelectContent>
-                                <SelectGroup>
-                                    {
-                                        /*
+                            <Select>
+                                <SelectTrigger className="w-[400px]">
+                                    <SelectValue placeholder="Coach" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                        {/*
                                          * Récupérer les coachs depuis la DB
-                                         */
-                                    }
-                                    <SelectLabel>Coach</SelectLabel>
-                                    <SelectItem value="1">Sophie Heim</SelectItem>
-
-                                </SelectGroup>
-                            </SelectContent>
-                        </Select>
+                                         */}
+                                        <SelectLabel>Coach</SelectLabel>
+                                        <SelectItem value="1">Sophie Heim</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
                         </div>
 
-                        <button className="mt-[50px] w-xl rounded-lg bg-[#141e66] p-2 text-white">Ajouter</button>
+                        <Button className="mt-4 w-xl border-1 border-[#141e66] bg-[#141e66] hover:bg-white hover:border-[#141e66] hover:border-1 hover:text-[#141e66]">
+                            Ajouter
+                        </Button>
                     </CardContent>
                 </Card>
             </div>

@@ -148,7 +148,7 @@ export default function Register() {
 
                     </div>
 
-                    <Button type="submit" className="mt-2 w-full" tabIndex={5} disabled={processing}>
+                    <Button type="submit" className="mt-2 w-full border-1 border-[#141e66] bg-[#141e66] hover:bg-white hover:border-[#141e66] hover:border-1 hover:text-[#141e66]" tabIndex={5} disabled={processing}>
                         {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
                         Create account
                     </Button>

@@ -4,6 +4,7 @@ import type { BreadcrumbItem } from '@/types';
 import { Head } from '@inertiajs/react';
 
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Button } from '@/components/ui/button';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -100,7 +101,10 @@ export default function AddGrade() {
                             </SelectContent>
                         </Select>
 
-                        <button className="bg-[#141e66] text-white rounded-lg p-2 w-xl mt-[50px]">Ajouter</button>
+
+                        <Button className="mt-4 w-xl border-1 border-[#141e66] bg-[#141e66] hover:bg-white hover:border-[#141e66] hover:border-1 hover:text-[#141e66]">
+                            Ajouter
+                        </Button>
                     </CardContent>
                 </Card>
             </div>
