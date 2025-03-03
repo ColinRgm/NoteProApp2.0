@@ -4,6 +4,15 @@ import type { BreadcrumbItem } from '@/types';
 import { Head } from '@inertiajs/react';
 
 import { Input } from '@/components/ui/input';
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue
+} from '@/components/ui/select';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -36,6 +45,27 @@ export default function AddStudent() {
                         <div className="flex flex-row items-center justify-center gap-5">
                             <label htmlFor="firstName">Email:</label>
                             <Input id="email" placeholder="Email" type="email" className="w-130" />
+                        </div>
+
+                        <div className="flex flex-row items-center justify-center gap-5">
+                            <label htmlFor="coach">Coach:</label>
+                        <Select>
+                            <SelectTrigger className="w-[400px]">
+                                <SelectValue placeholder="Coach" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                    {
+                                        /*
+                                         * Récupérer les coachs depuis la DB
+                                         */
+                                    }
+                                    <SelectLabel>Coach</SelectLabel>
+                                    <SelectItem value="1">Sophie Heim</SelectItem>
+
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
                         </div>
 
                         <button className="mt-[50px] w-xl rounded-lg bg-[#141e66] p-2 text-white">Ajouter</button>
