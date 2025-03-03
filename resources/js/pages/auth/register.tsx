@@ -8,9 +8,19 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import AuthLayout from '@/layouts/auth-layout';
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue
+} from '@/components/ui/select';
 
 interface RegisterForm {
-    name: string;
+    last_name: string;
+    first_name: string;
     email: string;
     password: string;
     password_confirmation: string;
@@ -18,7 +28,8 @@ interface RegisterForm {
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm<RegisterForm>({
-        name: '',
+        las_name: '',
+        first_name: '',
         email: '',
         password: '',
         password_confirmation: '',
@@ -32,29 +43,46 @@ export default function Register() {
     };
 
     return (
-        <AuthLayout title="Create an account" description="Enter your details below to create your account">
+        <AuthLayout title="Créer un compte" description="Entrez vos informations pour la création de votre compte">
             <Head title="Register" />
             <form className="flex flex-col gap-6" onSubmit={submit}>
                 <div className="grid gap-6">
                     <div className="grid gap-2">
-                        <Label htmlFor="name">Name</Label>
+                        <Label htmlFor="name">Nom</Label>
                         <Input
-                            id="name"
+                            id="last_name"
                             type="text"
                             required
                             autoFocus
                             tabIndex={1}
-                            autoComplete="name"
-                            value={data.name}
-                            onChange={(e) => setData('name', e.target.value)}
+                            autoComplete="last_name"
+                            value={data.last_name}
+                            onChange={(e) => setData('last_name', e.target.value)}
                             disabled={processing}
-                            placeholder="Full name"
+                            placeholder="Nom"
                         />
-                        <InputError message={errors.name} className="mt-2" />
+                        <InputError message={errors.last_name} className="mt-2" />
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="email">Email address</Label>
+                        <Label htmlFor="first_name">Prénom</Label>
+                        <Input
+                            id="first_name"
+                            type="text"
+                            required
+                            autoFocus
+                            tabIndex={1}
+                            autoComplete="first_name"
+                            value={data.first_name}
+                            onChange={(e) => setData('first_name', e.target.value)}
+                            disabled={processing}
+                            placeholder="Prénom"
+                        />
+                        <InputError message={errors.first_name} className="mt-2" />
+                    </div>
+
+                    <div className="grid gap-2">
+                        <Label htmlFor="email">Email</Label>
                         <Input
                             id="email"
                             type="email"
@@ -64,13 +92,13 @@ export default function Register() {
                             value={data.email}
                             onChange={(e) => setData('email', e.target.value)}
                             disabled={processing}
-                            placeholder="email@example.com"
+                            placeholder="email@jobtrek.ch"
                         />
                         <InputError message={errors.email} />
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="password">Password</Label>
+                        <Label htmlFor="password">Mot de passe</Label>
                         <Input
                             id="password"
                             type="password"
@@ -80,13 +108,13 @@ export default function Register() {
                             value={data.password}
                             onChange={(e) => setData('password', e.target.value)}
                             disabled={processing}
-                            placeholder="Password"
+                            placeholder="Mot de passe"
                         />
                         <InputError message={errors.password} />
                     </div>
 
                     <div className="grid gap-2">
-                        <Label htmlFor="password_confirmation">Confirm password</Label>
+                        <Label htmlFor="password_confirmation">Confirmer mot de passe</Label>
                         <Input
                             id="password_confirmation"
                             type="password"
@@ -96,9 +124,28 @@ export default function Register() {
                             value={data.password_confirmation}
                             onChange={(e) => setData('password_confirmation', e.target.value)}
                             disabled={processing}
-                            placeholder="Confirm password"
+                            placeholder="Confirmer mot de passe"
                         />
                         <InputError message={errors.password_confirmation} />
+                    </div>
+
+                    <div className="grid gap-2">
+                        <Label htmlFor="role">Rôle</Label>
+                        <Select>
+                            <SelectTrigger className="w-[400px]">
+                                <SelectValue placeholder="Rôle" />
+                            </SelectTrigger>
+                            <SelectContent>
+
+                                <SelectGroup>
+
+                                    <SelectItem value="formateur">Formateur</SelectItem>
+                                    <SelectItem value="coach">Coach</SelectItem>
+
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+
                     </div>
 
                     <Button type="submit" className="mt-2 w-full" tabIndex={5} disabled={processing}>
