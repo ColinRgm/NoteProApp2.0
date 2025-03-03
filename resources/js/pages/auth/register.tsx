@@ -7,16 +7,8 @@ import TextLink from '@/components/text-link';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import AuthLayout from '@/layouts/auth-layout';
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectLabel,
-    SelectTrigger,
-    SelectValue
-} from '@/components/ui/select';
 
 interface RegisterForm {
     last_name: string;
@@ -28,7 +20,7 @@ interface RegisterForm {
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm<RegisterForm>({
-        las_name: '',
+        last_name: '',
         first_name: '',
         email: '',
         password: '',
@@ -48,7 +40,7 @@ export default function Register() {
             <form className="flex flex-col gap-6" onSubmit={submit}>
                 <div className="grid gap-6">
                     <div className="grid gap-2">
-                        <Label htmlFor="name">Nom</Label>
+                        <Label htmlFor="last_name">Nom</Label>
                         <Input
                             id="last_name"
                             type="text"
@@ -70,8 +62,7 @@ export default function Register() {
                             id="first_name"
                             type="text"
                             required
-                            autoFocus
-                            tabIndex={1}
+                            tabIndex={2}
                             autoComplete="first_name"
                             value={data.first_name}
                             onChange={(e) => setData('first_name', e.target.value)}
@@ -87,7 +78,7 @@ export default function Register() {
                             id="email"
                             type="email"
                             required
-                            tabIndex={2}
+                            tabIndex={3}
                             autoComplete="email"
                             value={data.email}
                             onChange={(e) => setData('email', e.target.value)}
@@ -103,7 +94,7 @@ export default function Register() {
                             id="password"
                             type="password"
                             required
-                            tabIndex={3}
+                            tabIndex={4}
                             autoComplete="new-password"
                             value={data.password}
                             onChange={(e) => setData('password', e.target.value)}
@@ -119,7 +110,7 @@ export default function Register() {
                             id="password_confirmation"
                             type="password"
                             required
-                            tabIndex={4}
+                            tabIndex={5}
                             autoComplete="new-password"
                             value={data.password_confirmation}
                             onChange={(e) => setData('password_confirmation', e.target.value)}
@@ -136,19 +127,20 @@ export default function Register() {
                                 <SelectValue placeholder="Rôle" />
                             </SelectTrigger>
                             <SelectContent>
-
                                 <SelectGroup>
-
                                     <SelectItem value="formateur">Formateur</SelectItem>
                                     <SelectItem value="coach">Coach</SelectItem>
-
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
-
                     </div>
 
-                    <Button type="submit" className="mt-2 w-full border-1 border-[#141e66] bg-[#141e66] hover:bg-white hover:border-[#141e66] hover:border-1 hover:text-[#141e66]" tabIndex={5} disabled={processing}>
+                    <Button
+                        type="submit"
+                        className="mt-2 w-full border-1 border-[#141e66] bg-[#141e66] hover:border-1 hover:border-[#141e66] hover:bg-white hover:text-[#141e66]"
+                        tabIndex={5}
+                        disabled={processing}
+                    >
                         {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
                         Create account
                     </Button>

@@ -23,7 +23,8 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
     const { auth } = usePage<SharedData>().props;
 
     const { data, setData, patch, errors, processing, recentlySuccessful } = useForm({
-        name: auth.user.name,
+        last_name: auth.user.last_name,
+        name: auth.user.first_name,
         email: auth.user.email,
     });
 
@@ -51,19 +52,35 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
 
                     <form onSubmit={submit} className="space-y-6">
                         <div className="grid gap-2">
-                            <Label htmlFor="name">Nom</Label>
+                            <Label htmlFor="last_name">Nom</Label>
 
                             <Input
-                                id="name"
+                                id="last_name"
                                 className="mt-1 block w-full"
-                                value={data.name}
-                                onChange={(e) => setData('name', e.target.value)}
+                                value={data.last_name}
+                                onChange={(e) => setData('last_name', e.target.value)}
                                 required
-                                autoComplete="name"
-                                placeholder="Nom complet"
+                                autoComplete="last_name"
+                                placeholder="Nom"
                             />
 
-                            <InputError className="mt-2" message={errors.name} />
+                            <InputError className="mt-2" message={errors.last_name} />
+                        </div>
+
+                        <div className="grid gap-2">
+                            <Label htmlFor="first_name">Prénom</Label>
+
+                            <Input
+                                id="first_name"
+                                className="mt-1 block w-full"
+                                value={data.first_name}
+                                onChange={(e) => setData('name', e.target.value)}
+                                required
+                                autoComplete="first_name"
+                                placeholder="Prénom"
+                            />
+
+                            <InputError className="mt-2" message={errors.first_name} />
                         </div>
 
                         <div className="grid gap-2">
