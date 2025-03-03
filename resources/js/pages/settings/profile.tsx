@@ -52,22 +52,6 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
 
                     <form onSubmit={submit} className="space-y-6">
                         <div className="grid gap-2">
-                            <Label htmlFor="last_name">Nom</Label>
-
-                            <Input
-                                id="last_name"
-                                className="mt-1 block w-full"
-                                value={data.last_name}
-                                onChange={(e) => setData('last_name', e.target.value)}
-                                required
-                                autoComplete="last_name"
-                                placeholder="Nom"
-                            />
-
-                            <InputError className="mt-2" message={errors.last_name} />
-                        </div>
-
-                        <div className="grid gap-2">
                             <Label htmlFor="first_name">Prénom</Label>
 
                             <Input
@@ -81,6 +65,22 @@ export default function Profile({ mustVerifyEmail, status }: { mustVerifyEmail: 
                             />
 
                             <InputError className="mt-2" message={errors.first_name} />
+                        </div>
+
+                        <div className="grid gap-2">
+                            <Label htmlFor="last_name">Nom</Label>
+
+                            <Input
+                                id="last_name"
+                                className="mt-1 block w-full"
+                                value={data.last_name}
+                                onChange={(e) => setData('last_name', e.target.value)}
+                                required
+                                autoComplete="last_name"
+                                placeholder="Nom"
+                            />
+
+                            <InputError className="mt-2" message={errors.last_name} />
                         </div>
 
                         <div className="grid gap-2">
