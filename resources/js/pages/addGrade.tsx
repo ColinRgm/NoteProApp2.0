@@ -29,7 +29,11 @@ export default function AddGrade() {
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
-                                    {/* Récupérer les modules depuis la DB */}
+                                    {
+                                        /*
+                                         * Récupérer les modules / branches depuis la DB
+                                         */
+                                    }
                                     <SelectLabel>Module</SelectLabel>
                                     <SelectItem value="241">Module 241</SelectItem>
 

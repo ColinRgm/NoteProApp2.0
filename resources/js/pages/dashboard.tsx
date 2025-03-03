@@ -46,6 +46,13 @@ export default function Dashboard() {
                     <CardTitle size="xxl" margin="big">
                         5 dernière notes
                     </CardTitle>
+
+                    {
+                        /*
+                         * Récupérer les 5 dernières notes (en fonction de la date)
+                         * Limiter le nombre de lignes
+                         */
+                    }
                     <CardContent>
                         <Tables
                             col_one_title="Branche / modules"
