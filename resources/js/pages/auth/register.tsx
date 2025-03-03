@@ -45,7 +45,7 @@ export default function Register() {
                             id="first_name"
                             type="text"
                             required
-                            tabIndex={2}
+                            tabIndex={1}
                             autoComplete="first_name"
                             value={data.first_name}
                             onChange={(e) => setData('first_name', e.target.value)}
@@ -62,7 +62,7 @@ export default function Register() {
                             type="text"
                             required
                             autoFocus
-                            tabIndex={1}
+                            tabIndex={2}
                             autoComplete="last_name"
                             value={data.last_name}
                             onChange={(e) => setData('last_name', e.target.value)}
