@@ -3,11 +3,11 @@ import AppLayout from '@/layouts/app-layout';
 import type { BreadcrumbItem } from '@/types';
 import { Head } from '@inertiajs/react';
 
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Input } from '@/components/ui/input';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
-        title: 'Ajouter une apprenti',
+        title: 'Ajouter un apprenti',
         href: '/addStudent',
     },
 ];
@@ -23,8 +23,22 @@ export default function AddStudent() {
                         Ajouter un apprenti
                     </CardTitle>
                     <CardContent className="flex flex-col gap-5">
+                        <div className="flex flex-row items-center justify-center gap-5">
+                            <label htmlFor="firstName">Prénom:</label>
+                            <Input id="firstName" placeholder="Prénom" type="text" className="w-130" />
+                        </div>
 
-                        <button className="bg-[#141e66] text-white rounded-lg p-2 w-xl mt-[50px]">Ajouter</button>
+                        <div className="flex flex-row items-center justify-center gap-5">
+                            <label htmlFor="firstName">Nom:</label>
+                            <Input id="lastname" placeholder="Nom" type="text" className="w-130" />
+                        </div>
+
+                        <div className="flex flex-row items-center justify-center gap-5">
+                            <label htmlFor="firstName">Email:</label>
+                            <Input id="email" placeholder="Email" type="email" className="w-130" />
+                        </div>
+
+                        <button className="mt-[50px] w-xl rounded-lg bg-[#141e66] p-2 text-white">Ajouter</button>
                     </CardContent>
                 </Card>
             </div>
