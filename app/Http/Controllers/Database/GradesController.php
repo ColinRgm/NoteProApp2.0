@@ -3,9 +3,7 @@
 namespace App\Http\Controllers\Database;
 
 use App\Http\Controllers\Controller;
-use App\Models\Grade;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\DB;
 
 class GradesController extends Controller
 {

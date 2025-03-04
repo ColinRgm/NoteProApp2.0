@@ -1,12 +1,15 @@
 <?php
 
+namespace App\Http\Controllers\Database;
+
+use App\Http\Controllers\Controller;
 use App\Models\Branches;
-use Illuminate\Http\JsonResponse;
 
 class BranchController extends Controller
 {
-    public function index(): JsonResponse {
-        $branches = Branches::all();
+    public function getBranches()
+    {
+        $branches = Branches::where('name', 'LIKE', '%CIE%')->get();
 
         return response()->json($branches);
     }

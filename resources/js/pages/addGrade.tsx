@@ -12,51 +12,38 @@ const breadcrumbs: BreadcrumbItem[] = [
     {
         title: 'Ajouter une note',
         href: '/addGrade',
-    },
+    }
 ];
 
-interface Branch {
-    id: number;
-    name: string;
-}
+const errorTitle: BreadcrumbItem[] = [
+    {
+        title: 'Erreur',
+        href: '/addGrade'
+    }
+];
 
 export default function AddGrade() {
-    const [branches, setBranches] = useState<Branch[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+
+    const [branches, setBranches] = useState([]);
+    const [error, setError] = useState();
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/branches')
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Erreur lors de la récupération des données...');
-                }
-                return response.json();
-            })
+        fetch("http://localhost:8000/api/branches") // Vérifie l'URL de ton backend
+            .then((response) => response.json())
             .then((data) => {
+                console.log("Branches reçues :", data); // Debug ici
                 setBranches(data);
-                setLoading(false);
             })
             .catch((error) => {
-                console.error('Erreur: ', error);
-                setError(error.message);
-                setLoading(false);
+                console.error("Erreur :", error);
+                setError("Impossible de charger les branches");
             });
     }, []);
 
-    if (loading)
+    if (error)
         return (
-            <AppLayout>
-                <div className="flex flex-1 flex-col items-center justify-center gap-10 rounded-xl p-4">
-                    <Card className="w-[70%] p-5">
-                        <p>Chargement...</p>
-                    </Card>
-                </div>
-            </AppLayout>
-        );
-    else if (error)
-        return (
-            <AppLayout>
+            <AppLayout breadcrumbs={errorTitle}>
+                <Head title="Erreur" />
                 <div className="flex flex-1 flex-col items-center justify-center gap-10 rounded-xl p-4">
                     <Card className="w-[70%] p-5">
                         <p>Erreur: {error}</p>
@@ -82,43 +69,24 @@ export default function AddGrade() {
                                 <SelectContent>
                                     <SelectGroup>
                                         <SelectLabel>Modules</SelectLabel>
-                                        {branches
+
+                                        {/*{branches
                                             .filter((branch) => branch.name.toLowerCase().includes('module'))
                                             .map((branch) => (
                                                 <SelectItem key={branch.id} value={branch.id.toString()}>
                                                     {branch.name}
                                                 </SelectItem>
+                                            ))}*/}
+
+                                        {branches.map((branch) => (
+                                            <SelectItem key={branch.id}>
+                                                {branch.name}
+                                            </SelectItem>
                                             ))}
 
                                         <SelectLabel>CIE</SelectLabel>
-                                        {branches
-                                            .filter((branch) => branch.name.toLowerCase().includes('cie'))
-                                            .map((branch) => (
-                                                <SelectItem key={branch.id} value={branch.id.toString()}>
-                                                    {branch.name}
-                                                </SelectItem>
-                                            ))}
-
                                         <SelectLabel>Math / Anglais</SelectLabel>
-                                        {branches
-                                            .filter(
-                                                (branch) =>
-                                                    branch.name.toLowerCase().includes('math') || branch.name.toLowerCase().includes('anglais'),
-                                            )
-                                            .map((branch) => (
-                                                <SelectItem key={branch.id} value={branch.id.toString()}>
-                                                    {branch.name}
-                                                </SelectItem>
-                                            ))}
-
                                         <SelectLabel>ECG</SelectLabel>
-                                        {branches
-                                            .filter((branch) => branch.name.toLowerCase().includes('ecg'))
-                                            .map((branch) => (
-                                                <SelectItem key={branch.id} value={branch.id.toString()}>
-                                                    {branch.name}
-                                                </SelectItem>
-                                            ))}
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
