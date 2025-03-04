@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+use App\Http\Controllers\BranchController;
+
 Route::get('/', function () {
     return Inertia::render('welcome');
 })->name('home');
@@ -51,6 +53,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('addStudent', function () {
         return Inertia::render('addStudent');
     })->name('addStudent');
+
+
+    Route::prefix('api')->group(function() {
+        Route::get('/branches', [BranchController::class, 'index']);
+    });
 
 });
 

@@ -6,6 +6,8 @@ import { Head } from '@inertiajs/react';
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
 
+import { useEffect, useState } from 'react';
+
 const breadcrumbs: BreadcrumbItem[] = [
     {
         title: 'Ajouter une note',
@@ -13,7 +15,39 @@ const breadcrumbs: BreadcrumbItem[] = [
     },
 ];
 
+interface Branch {
+    id: number,
+    name: string
+}
+
 export default function AddGrade() {
+
+    const [branches, setBranches] = useState<Branch[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        fetch('http://127.0.0.1:8000/api/branches')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Erreur lors de la récupération des données...");
+                }
+                return response.json();
+            })
+            .then(data => {
+                setBranches(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.error("Erreur: ", error);
+                setError(error.message);
+                setLoading(false)
+            })
+    }, []);
+
+    if (loading) return <p>Chargement...</p>
+    if (error) return <p>Erreur: {error}</p>
+
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Ajouter une note" />
@@ -105,6 +139,15 @@ export default function AddGrade() {
                         <Button className="mt-4 w-xl border-1 border-[#141e66] bg-[#141e66] hover:bg-white hover:border-[#141e66] hover:border-1 hover:text-[#141e66]">
                             Ajouter
                         </Button>
+
+                        <p>Liste des branches</p>
+                        <ul>
+                            {branches.map(branch => (
+                                <li key={branch.id}>
+                                    {branch.name}
+                                </li>
+                            ))}
+                        </ul>
                     </CardContent>
                 </Card>
             </div>
