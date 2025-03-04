@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\Database\BranchController;
+use App\Http\Controllers\Database\RoleController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-
-use App\Http\Controllers\BranchController;
 
 Route::get('/', function () {
     return Inertia::render('welcome');
@@ -57,6 +57,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::prefix('api')->group(function() {
         Route::get('/branches', [BranchController::class, 'index']);
+    });
+
+    Route::prefix('api')->group(function() {
+        Route::get('/roles', [RoleController::class, 'index']);
     });
 
 });
