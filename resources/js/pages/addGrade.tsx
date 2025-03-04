@@ -64,23 +64,41 @@ export default function AddGrade() {
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
+                                    <SelectLabel>Modules</SelectLabel>
                                     {
-                                        /*
-                                         * Récupérer les modules / branches depuis la DB
-                                         */
+                                        branches.filter(branch => branch.name.toLowerCase().includes('module')).map(branch => (
+                                            <SelectItem key={branch.id} value={branch.id.toString()}>
+                                                {branch.name}
+                                            </SelectItem>
+                                        ))
                                     }
-                                    <SelectLabel>Module</SelectLabel>
-                                    <SelectItem value="241">Module 241</SelectItem>
 
                                     <SelectLabel>CIE</SelectLabel>
-                                    <SelectItem value="213">CIE 213</SelectItem>
-
-                                    <SelectLabel>ECG</SelectLabel>
-                                    <SelectItem value="213">ECG</SelectItem>
+                                    {
+                                        branches.filter(branch => branch.name.toLowerCase().includes('cie')).map(branch => (
+                                            <SelectItem key={branch.id} value={branch.id.toString()}>
+                                                {branch.name}
+                                            </SelectItem>
+                                        ))
+                                    }
 
                                     <SelectLabel>Math / Anglais</SelectLabel>
-                                    <SelectItem value="math">Math</SelectItem>
-                                    <SelectItem value="anglais">Anglais</SelectItem>
+                                    {
+                                        branches.filter(branch => branch.name.toLowerCase().includes('math') || branch.name.toLowerCase().includes('anglais')).map(branch => (
+                                            <SelectItem key={branch.id} value={branch.id.toString()}>
+                                                {branch.name}
+                                            </SelectItem>
+                                        ))
+                                    }
+
+                                    <SelectLabel>ECG</SelectLabel>
+                                    {
+                                        branches.filter(branch => branch.name.toLowerCase().includes('ecg')).map(branch => (
+                                            <SelectItem key={branch.id} value={branch.id.toString()}>
+                                                {branch.name}
+                                            </SelectItem>
+                                        ))
+                                    }
                                 </SelectGroup>
                             </SelectContent>
                         </Select>
@@ -91,7 +109,6 @@ export default function AddGrade() {
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
-                                    {/* Récupérer les semestres depuis la DB */}
                                     <SelectLabel>1ère année</SelectLabel>
                                     <SelectItem value="semestre_1">Semestre 1</SelectItem>
                                     <SelectItem value="semestre_2">Semestre 2</SelectItem>
@@ -139,15 +156,6 @@ export default function AddGrade() {
                         <Button className="mt-4 w-xl border-1 border-[#141e66] bg-[#141e66] hover:bg-white hover:border-[#141e66] hover:border-1 hover:text-[#141e66]">
                             Ajouter
                         </Button>
-
-                        <p>Liste des branches</p>
-                        <ul>
-                            {branches.map(branch => (
-                                <li key={branch.id}>
-                                    {branch.name}
-                                </li>
-                            ))}
-                        </ul>
                     </CardContent>
                 </Card>
             </div>
