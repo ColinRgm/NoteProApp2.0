@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Database\BranchController;
+use App\Http\Controllers\Database\GradesController;
+use App\Http\Controllers\Database\RoleController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -51,6 +54,21 @@ Route::middleware(['auth'])->group(function () {
     Route::get('addStudent', function () {
         return Inertia::render('addStudent');
     })->name('addStudent');
+
+
+
+    /* API database */
+    Route::prefix('api')->group(function() {
+        Route::get('/branches', [BranchController::class, 'index']);
+    });
+
+    Route::prefix('api')->group(function() {
+        Route::get('/roles', [RoleController::class, 'index']);
+    });
+
+    Route::prefix('api')->group(function() {
+        Route::get('/grades', [GradesController::class, 'index']);
+    });
 
 });
 
