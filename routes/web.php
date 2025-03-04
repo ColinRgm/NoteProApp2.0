@@ -55,6 +55,8 @@ Route::middleware(['auth'])->group(function () {
     })->name('addStudent');
 
 
+
+    /* API database */
     Route::prefix('api')->group(function() {
         Route::get('/branches', [BranchController::class, 'index']);
     });
