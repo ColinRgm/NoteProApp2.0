@@ -1,16 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Database;
-
-use App\Http\Controllers\Controller;
+use App\Models\Branches;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\DB;
 
 class BranchController extends Controller
 {
     public function index(): JsonResponse {
-        $branch = DB::table('branchs')->get();
+        $branches = Branches::all();
 
-        return response()->json($branch);
+        return response()->json($branches);
     }
 }
+
