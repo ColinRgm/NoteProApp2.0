@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Database;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Role;
 
 class RoleController extends Controller
 {
-    public function index()
+    public function getRoles()
     {
-        return response()->json(['message' => 'Roles fetched successfully']);
+        $roles = Role::all();
+
+        return response()->json($roles);
     }
 }

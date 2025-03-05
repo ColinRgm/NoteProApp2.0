@@ -11,14 +11,14 @@ class GradesController extends Controller
     public function index(): JsonResponse
     {
 
-        $grades = Grade::join('branches', 'grades.branch_id', '=', 'branches.id')
+        $grades = Grade::join('branche', 'grades.branch_id', '=', 'branche.id')
             ->select([
                 'grades.id',
                 'grades.name',
                 'grades.pdf',
                 'grades.semester',
-                'grades.branch_id as id_branch',
-                'branches.name as name_branch'
+                'grades.branche_id as id_branche',
+                'branche.name as name_branche'
             ])
             ->get();
 
