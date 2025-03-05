@@ -53,14 +53,6 @@ Route::middleware(['auth'])->group(function () {
         return Inertia::render('addStudent');
     })->name('addStudent');
 
-
-    /* API database */
-    Route::prefix('api')->group(function () {
-        Route::get('/branches', [BranchController::class, 'index']);
-        Route::get('/roles', [RoleController::class, 'index']);
-        Route::get('/grades', [GradesController::class, 'index']);
-    });
-
 });
 
 require __DIR__ . '/settings.php';

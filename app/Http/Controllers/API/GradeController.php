@@ -3,17 +3,17 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Models\Role;
+use App\Models\Grade;
 use Illuminate\Http\Request;
 
-class RoleUserController extends Controller
+class GradeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return Role::all();
+        Return Grade::all();
     }
 
     /**
@@ -27,7 +27,7 @@ class RoleUserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(string $id)
     {
         //
     }

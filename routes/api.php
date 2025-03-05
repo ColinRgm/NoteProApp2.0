@@ -1,16 +1,15 @@
 <?php
 
-use App\Http\Controllers\API\RoleUserController;
-use App\Http\Controllers\Database\BranchController;
-use App\Http\Controllers\Database\GradesController;
-use App\Http\Controllers\Database\RoleController;
 use Illuminate\Support\Facades\Route;
 
+// Call controllers
+use App\Http\Controllers\API\RoleUserController;
+use App\Http\Controllers\API\GradeController;
+use App\Http\Controllers\API\BrancheController;
 
-/*Route::get('/roles', [RoleController::class, 'getRoles']);
-
-Route::get('/branches', [BranchController::class, 'getBranches']);
-
-Route::get('/grades', [GradesController::class, 'index']);*/
 
 Route::apiResource('roles', RoleUserController::class);
+
+Route::apiResource('grades', GradeController::class);
+
+Route::apiResource('branches', BrancheController::class);
