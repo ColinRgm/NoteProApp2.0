@@ -31,7 +31,7 @@ export default function AddGrade() {
         fetch("http://localhost:8000/api/branches") // Vérifie l'URL de ton backend
             .then((response) => response.json())
             .then((data) => {
-                console.log("Branches reçues :", data); // Debug ici
+                console.log("Branche reçues :", data); // Debug ici
                 setBranches(data);
             })
             .catch((error) => {
