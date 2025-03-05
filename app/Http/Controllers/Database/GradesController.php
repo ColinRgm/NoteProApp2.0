@@ -4,25 +4,23 @@ namespace App\Http\Controllers\Database;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\JsonResponse;
+use App\Models\Grade;
 
 class GradesController extends Controller
 {
     public function index(): JsonResponse
     {
-        $grades =
-            "
-            SELECT
-                grades.id,
-                grades.name,
-                grades.pdf,
-                grades.semester,
-                branch_id as id_branch,
-                name as name_branch
-            FROM grades
-            JOIN branchs ON grades.branch_id = branchs.id
-            ";
 
-
+        $grades = Grade::join('branches', 'grades.branch_id', '=', 'branches.id')
+            ->select([
+                'grades.id',
+                'grades.name',
+                'grades.pdf',
+                'grades.semester',
+                'grades.branch_id as id_branch',
+                'branches.name as name_branch'
+            ])
+            ->get();
 
         return response()->json($grades);
     }
