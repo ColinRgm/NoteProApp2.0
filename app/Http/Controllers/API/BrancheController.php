@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use App\Models\Branche;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class BrancheController extends Controller
 {
@@ -27,9 +28,11 @@ class BrancheController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Branche $branche)
     {
-        //
+        return Inertia::render('addGrade', [
+            'Branche' => $branche
+        ]);
     }
 
     /**

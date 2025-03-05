@@ -13,7 +13,7 @@ class GradeController extends Controller
      */
     public function index()
     {
-        Return Grade::all();
+        return Grade::all();
     }
 
     /**
