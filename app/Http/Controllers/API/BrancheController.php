@@ -30,9 +30,9 @@ class BrancheController extends Controller
      */
     public function show(Branche $branche)
     {
-        return Inertia::render('addGrade', [
-            'Branche' => $branche
-        ]);
+        /*return Inertia::render('addGrade', [
+            'branche' => Branche
+        ]);*/
     }
 
     /**
