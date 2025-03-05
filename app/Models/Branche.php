@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\JsonResponse;
 
-class Branches extends Model
+class Branche extends Model
 {
     protected $table = 'branche';
 }

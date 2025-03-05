@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\Database;
 
 use App\Http\Controllers\Controller;
-use App\Models\Branches;
+use App\Models\Branche;
 
 class BranchController extends Controller
 {
     public function getBranches()
     {
-        $branches = Branches::where('name', 'LIKE', '%CIE%')->get();
+        $branches = Branche::where('name', 'LIKE', '%CIE%')->get();
 
         return response()->json($branches);
     }
