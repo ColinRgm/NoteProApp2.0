@@ -7,7 +7,7 @@ use Illuminate\Http\JsonResponse;
 
 class Branche extends Model
 {
+
     protected $table = 'branche';
 
-    protected $usedColumn = ['name'];
 }

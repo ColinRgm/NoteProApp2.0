@@ -21,7 +21,7 @@ const breadcrumbs: BreadcrumbItem[] = [
     }
 ];
 
-export default function AddGrade({ Branches }) {
+export default function AddGrade({ branches }) {
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Ajouter une note" />
@@ -40,11 +40,11 @@ export default function AddGrade({ Branches }) {
                                 <SelectGroup>
                                     <SelectLabel>Modules</SelectLabel>
 
-                                    {Branches.map((Branche) => (
-                                            <SelectItem value={Branche.id}>
-                                                {Branche}
+                                    {/*{branches.map((branche) => (
+                                            <SelectItem value={branche.id}>
+                                                {branche}
                                             </SelectItem>
-                                        ))}
+                                        ))}*/}
 
                                         {/*{branches
                                             .filter((branch) => branch.name.toLowerCase().includes('module'))

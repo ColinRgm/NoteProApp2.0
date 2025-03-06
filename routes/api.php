@@ -12,4 +12,6 @@ Route::apiResource('roles', RoleUserController::class);
 
 Route::apiResource('grades', GradeController::class);
 
-Route::apiResource('branches', BrancheController::class);
+// Route::apiResource('branches', BrancheController::class);
+
+Route::get('/addGrade', [BrancheController::class, 'index']);

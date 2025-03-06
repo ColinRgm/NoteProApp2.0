@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\GradeResources;
 use App\Models\Branche;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use function Pest\Laravel\get;
 
 class BrancheController extends Controller
 {
@@ -14,7 +16,9 @@ class BrancheController extends Controller
      */
     public function index()
     {
-        return Branche::all();
+        $branches = Branche::all();
+
+        return GradeResources::collection($branches);
     }
 
     /**
@@ -30,9 +34,7 @@ class BrancheController extends Controller
      */
     public function show(Branche $branche)
     {
-        /*return Inertia::render('addGrade', [
-            'branche' => Branche
-        ]);*/
+        //
     }
 
     /**
