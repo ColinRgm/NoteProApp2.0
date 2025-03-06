@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Branche;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
-use function Pest\Laravel\get;
 
 class BrancheController extends Controller
 {
@@ -29,12 +28,12 @@ class BrancheController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(Branche $branche)
     {
-        $branche = Branche::where('name', 'LIKE', '%CIE%')->get(['id', 'name']);
+        // $branche = Branche::where('name', 'LIKE', '%CIE%')->get(['id', 'name']);
 
         return Inertia::render('AddGrade', [
-            'branches' => $branche,
+            'branche' => $branche
         ]);
     }
 
