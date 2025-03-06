@@ -16,9 +16,11 @@ class BrancheController extends Controller
      */
     public function index()
     {
-        $branches = Branche::all();
+        $branches = Branche::where('name', 'LIKE', '%CIE%')->get(['id', 'name']);
 
-        return GradeResources::collection($branches);
+        return Inertia::render('addGrade', [
+            'branches' => $branches,
+        ]);
     }
 
     /**

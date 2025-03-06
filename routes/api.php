@@ -8,10 +8,9 @@ use App\Http\Controllers\API\GradeController;
 use App\Http\Controllers\API\BrancheController;
 
 
-Route::apiResource('roles', RoleUserController::class);
-
-Route::apiResource('grades', GradeController::class);
-
-// Route::apiResource('branches', BrancheController::class);
+Route::apiResources([
+    'roles' => RoleUserController::class,
+    'grades' => GradeController::class,
+]);
 
 Route::get('/addGrade', [BrancheController::class, 'index']);
