@@ -1,27 +1,21 @@
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import AppLayout from '@/layouts/app-layout';
 import type { BreadcrumbItem } from '@/types';
-import { Head } from '@inertiajs/react';
+import { Head, usePage } from '@inertiajs/react';
 
 import { Button } from '@/components/ui/button';
-import {
-    Select,
-    SelectContent,
-    SelectGroup,
-    SelectItem,
-    SelectLabel,
-    SelectTrigger,
-    SelectValue
-} from '@/components/ui/select';
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
         title: 'Ajouter une note',
-        href: '/addGrade'
-    }
+        href: '/addGrade',
+    },
 ];
 
-export default function AddGrade({ Branches }) {
+export default function AddGrade({branches}) {
+
+
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Ajouter une note" />
@@ -39,7 +33,12 @@ export default function AddGrade({ Branches }) {
                             <SelectContent>
                                 <SelectGroup>
                                     <SelectLabel>Modules</SelectLabel>
-                                    <SelectItem value={Branches.id}>{Branches.name}</SelectItem>
+
+                                    {branches.map(branche => {
+                                        <SelectItem key={branche.id} value={branche.id}>
+                                            {branche.name}
+                                        </SelectItem>;
+                                    })}
 
                                     <SelectLabel>CIE</SelectLabel>
                                     <SelectLabel>Math / Anglais</SelectLabel>

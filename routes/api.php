@@ -13,4 +13,4 @@ Route::apiResources([
     'grades' => GradeController::class,
 ]);
 
-Route::get('/addGrade', [BrancheController::class, 'index']);
+Route::get('/addGrade', [BrancheController::class, 'show']);

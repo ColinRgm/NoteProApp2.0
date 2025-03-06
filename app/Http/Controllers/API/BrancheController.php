@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Http\Resources\GradeResources;
 use App\Models\Branche;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -16,11 +15,7 @@ class BrancheController extends Controller
      */
     public function index()
     {
-        $branches = Branche::where('name', 'LIKE', '%CIE%')->get(['id', 'name']);
-
-        return Inertia::render('addGrade', [
-            'branches' => $branches,
-        ]);
+        //
     }
 
     /**
@@ -34,9 +29,13 @@ class BrancheController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Branche $branche)
+    public function show()
     {
-        //
+        $branche = Branche::where('name', 'LIKE', '%CIE%')->get(['id', 'name']);
+
+        return Inertia::render('AddGrade', [
+            'branches' => $branche,
+        ]);
     }
 
     /**
